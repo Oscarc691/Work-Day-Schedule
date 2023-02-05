@@ -14,7 +14,14 @@
 </head>
 
 <body>
-   
+    <div id="currentTime"></div>
+    <script>
+      const element = document.getElementById('currentTime');
+      setInterval(function () {
+        const currentDate = new Date();
+        element.innerText = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
+      }, 1000);
+    </script>
     <header class="jumbotron bg-primary"> <!--use of bootstrap component-->
         <h1 class="font-fantasy font-weight-bold display-2">Work Day Schedule</h1>
         <p class="font-weight-bold lead">A Daily Calender to get you better prepeared for the upcoming day!</p>
